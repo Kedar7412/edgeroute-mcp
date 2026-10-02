@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edgeroute-mcp"
+version = "0.1.0"
+description = "A sub-millisecond, self-improving edge decision engine MCP server"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Kedar Pathak" }]
+dependencies = [
+    "mcp<2",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+edgeroute = "decision_engine_mcp:mcp.run"
